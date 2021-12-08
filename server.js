@@ -1,6 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Notedb", {
+  useFindAndModify: false,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
 const app = express();
 const PORT = process.env.PORT || 3001;
 
