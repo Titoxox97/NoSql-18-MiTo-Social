@@ -1,8 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Notedb", {
-  useFindAndModify: false,
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/mitodb", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
